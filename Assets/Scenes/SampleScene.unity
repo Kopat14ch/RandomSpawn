@@ -209,9 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734a879543354c145a997cb8b7786c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnPoints: {fileID: 0}
-  _template: {fileID: 0}
-  _delay: 0
+  _spawnPoints: {fileID: 194710573}
+  _enemy: {fileID: 7057587737794343023, guid: 369f82b24b3e8ef4681f0dfd78c79a17, type: 3}
+  _delay: 2
   _countEnemy: 4
 --- !u!1 &413785376
 GameObject:

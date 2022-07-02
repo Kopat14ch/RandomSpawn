@@ -5,7 +5,7 @@ using Random = System.Random;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
-    [SerializeField] private GameObject _template;
+    [SerializeField] private Enemy _enemy;
     [SerializeField] private float _delay;
     [SerializeField] private int _countEnemy;
     
@@ -37,8 +37,6 @@ public class EnemySpawn : MonoBehaviour
         }
 
         StartCoroutine(Spawn());
-
-
     }
 
     private IEnumerator Spawn()
@@ -47,7 +45,7 @@ public class EnemySpawn : MonoBehaviour
 
         for (int i = 0; i < _countEnemy; i++)
         {
-            GameObject newObject = Instantiate(_template, Vector3.zero, Quaternion.identity);
+            GameObject newObject = Instantiate(_enemy.gameObject, Vector3.zero, Quaternion.identity);
             Transform newObjectTransform = newObject.GetComponent<Transform>();
 
             newObjectTransform.position = _points[random.Next(_spawnPoints.childCount)].position;
